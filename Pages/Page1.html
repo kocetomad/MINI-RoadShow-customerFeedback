@@ -1,76 +1,14 @@
 <!DOCTYPE html>
-
 <html>
   <script>
-    document.cookie = "username=John Doe";
-
-    console.log(getCookie("username"))
-
     var audio = new Audio("MEDIA_211006_2P60299_3N65091_2R22147_Combined.wav");
-
     function clickityFun() {
-      audio.play();
-
-      console.log("help");
-
-      
-      
+        audio.play();
+        console.log("bitch")
     }
-
-    function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(";");
-        for (let i = 0; i < ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == " ") {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "wow";
-      }
   </script>
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <style>
-      img {
-        display: block;
-
-        margin-left: auto;
-
-        margin-right: auto;
-      }
-
-      video {
-        display: block;
-
-        margin-left: auto;
-
-        margin-right: auto;
-      }
-    </style>
-  </head>
-
-  <h2 style="text-align: center">Click here! ↓</h2>
-
   <a onclick="clickityFun();">
-    <img src="MEDIA_210929_Test_Landscape.jpg" style="width: 50%" />
+    <img src="MEDIA_210929_Test_Landscape.jpg" />
   </a>
-
-  <b>
-    <video
-      controls="controls"
-      width="800"
-      height="600"
-      name="Customer_Summary"
-      style="width: 50%"
-    >
-      <source src="MEDIA_191029_Voice-of-the-Customer_summary_Subtitled.mov" />
-    </video>
-  </b>
 </html>
