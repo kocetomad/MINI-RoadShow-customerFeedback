@@ -2,29 +2,54 @@
   <script>
     
 
+    var link = "";
+    
+    function answerChecker()
+    {
+
+      if(document.getElementById("a1").checked == true)
+      {
+        
+        var link = "/Page3_Correct.html";
+        document.location.href = link;
+        
+      }
+      else
+      {
+        var link = "/Page3_Incorrect.html";
+        document.location.href = link;
+      }
+
+      return link;
+    }
+
   </script>
 
 
     <h1>
-
-
-
-        Sample BMW Survey Question
-
-        <form action="Page3.html">
-            <p>Lorem Ipsum ?:</p>
-            
-            <input type="radio" id="a1" name="answer1" value="Answer 1">
-            <label for="a1">Answer 1</label><br>
-            <input type="radio" id="a2" name="answer2" value="Answer 2">
-            <label for="a2">Answer 2</label><br>
-            <input type="radio" id="a3" name="answer3" value="Answer 3">
-            <label for="a3">Answer 3</label>
-
-          <input type="submit" value="Submit">
-        </form>
-            
-          <br>  
+      Sample BMW Survey Question
     </h1>
+  
+    <form>
+      
+
+        <p>Lorem Ipsum?:</p>
+        <div>
+          <input type="radio" id="a1"
+                 name="answer" value="answer1">
+          <label for="answer1">Answer</label>
+          <input type="radio" id="a2"
+                 name="answer" value="answer2">
+          <label for="answer2">Answer</label>
+          <input type="radio" id="a3"
+                 name="answer" value="answer3">
+          <label for="answer3">Answer</label>
+        </div>
+        <div>
+          <input type = "button" onClick = " answerChecker() " value = "Submit"/>
+        </div>
+    </form>
+      
+    
 
 </html>
