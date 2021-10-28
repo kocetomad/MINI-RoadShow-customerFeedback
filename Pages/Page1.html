@@ -1,3 +1,5 @@
+<script src="util.js"></script>
+
 <!DOCTYPE html>
 
 <html>
@@ -5,7 +7,6 @@
 
   <script>
 
-    console.log(getCookie("username"));
 
     var audio = new Audio("MEDIA_211006_2P60299_3N65091_2R22147_Combined.wav");
 
@@ -14,38 +15,11 @@
 
       console.log("help");
     }
-
-    function getCookie(cname) {
-      let name = cname + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let ca = decodedCookie.split(";");
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          document.getElementById("h1").innerHTML = "Welcome again";
-
-          return c.substring(name.length, c.length);
-        }
-      }
-      document.cookie = "username="+makeid(20)+"";
+    var c = getCookie("username");
+    if(c!=""){
+      document.getElementById("h1").innerHTML = "Welcome again";
+    }else{
       document.getElementById("h1").innerHTML = "Welcome";
-      return "";
-    }
-
-    function makeid(length) {
-      var result = "";
-      var characters =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-      var charactersLength = characters.length;
-      for (var i = 0; i < length; i++) {
-        result += characters.charAt(
-          Math.floor(Math.random() * charactersLength)
-        );
-      }
-      return result;
     }
 
   </script>
