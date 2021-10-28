@@ -23,6 +23,35 @@
       return link;
     }
 
+   let data = {element: "barium"};
+
+    fetch("/post/data/here", {
+      method: "POST", 
+      body: JSON.stringify(data)
+    }).then(res => {
+      console.log("Request complete! response:", res);
+    });
+
+
+
+
+    function check()
+    {
+      var f = document.getElementById("question");
+      f.setAttribute('method', 'post');
+      if(document.getElementById("a1").checked == true)
+      {
+        console.log("correct");
+        document.location.href ="\Page3_Correct.html"
+      }
+      else
+      {
+        console.log("incorrect");
+        document.location.href ="\Page3_Incorrect.html"
+      }
+      return true;
+    }
+
   </script>
 
 
@@ -31,6 +60,7 @@
     </h1>
   
     <form>
+
       
 
         <p>Lorem Ipsum?:</p>
@@ -47,6 +77,7 @@
         </div>
         <div>
           <input type = "button" onClick = " answerChecker() " value = "Submit"/>
+
         </div>
     </form>
       
