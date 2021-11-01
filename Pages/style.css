@@ -15,7 +15,7 @@ body
     align-content: center;
 }
 
-.feedback-image 
+.feedback-image-correct
 {
     
     object-fit: contain;
@@ -23,10 +23,24 @@ body
     height: 125px;
     background: url('party-popper.png');
     background-size: cover;
-    
+
     align-content: center;
     margin-left: 580px;
 }
+
+.feedback-image-incorrect
+{
+    
+    object-fit: contain;
+    width: 10%;
+    height: 126px;
+    background: url('wrong.png');
+    background-size: cover;
+
+    align-content: center;
+    margin-left: 580px;
+}
+
 
 
 
