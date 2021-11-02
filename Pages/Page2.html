@@ -26,9 +26,48 @@
         var link = "/Page3_Incorrect.html";
         document.location.href = link;
       }
-
       return link;
     }
+  </script>
+  
+    <h1>
+      <div class = 'header-img'>
+      </div>
+    </h1>
+
+    <h2>
+      <div class = 'question-header'>
+           Question1
+      </div>
+      
+    </h2>
+
+    <p> 
+      <br>
+      <div class = 'question' > Lorem Ipsum? :</div>
+    </p>
+
+  
+    <form class = 'answer-box'>
+        
+        
+          <label for="answer1">Answer</label>
+          <input type="radio" id="a1"
+                 name="answer" value="answer1">
+          <label for="answer2">Answer</label>
+          <input type="radio" id="a2"
+                 name="answer" value="answer2">
+          <label for="answer3">Answer</label>
+          <input type="radio" id="a3"
+                 name="answer" value="answer3">
+        <div>
+          <input class = 'submit-button' type = "button" onClick = " answerChecker() " value = "Submit"/>
+        </div>
+    </form>
+      
+    
+
+</html>
 
     function check() {
       var f = document.getElementById("question");
