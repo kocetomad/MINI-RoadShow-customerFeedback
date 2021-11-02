@@ -1,17 +1,28 @@
-<html>
-  <link rel="stylesheet" href="style.css">
+<script src="util.js"></script>
 
+<html>
   <script>
     var link = "";
-    function answerChecker()
-    {
-      if(document.getElementById("a1").checked == true)
-      {
+
+    function answerChecker() {
+      if (document.getElementById("a1").checked == true) {
+        //Inserting score for correct answer 
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertScores", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(
+          JSON.stringify({
+            id: getCookie("username"),
+            score: 1,
+          })
+        );
+
+
         var link = "/Page3_Correct.html";
         document.location.href = link;
-      }
-      else
-      {
+
+        
+      } else {
         var link = "/Page3_Incorrect.html";
         document.location.href = link;
       }
@@ -56,4 +67,36 @@
       
     
 
+</html>
+
+    function check() {
+      var f = document.getElementById("question");
+      f.setAttribute("method", "post");
+      if (document.getElementById("a1").checked == true) {
+        console.log("correct");
+        document.location.href = "\Page3_Correct.html";
+      } else {
+        console.log("incorrect");
+        document.location.href = "\Page3_Incorrect.html";
+      }
+      return true;
+    }
+  </script>
+
+  <h1>Sample BMW Survey Question</h1>
+
+  <form>
+    <p>Lorem Ipsum?:</p>
+    <div>
+      <input type="radio" id="a1" name="answer" value="answer1" />
+      <label for="answer1">Answer</label>
+      <input type="radio" id="a2" name="answer" value="answer2" />
+      <label for="answer2">Answer</label>
+      <input type="radio" id="a3" name="answer" value="answer3" />
+      <label for="answer3">Answer</label>
+    </div>
+    <div>
+      <input type="button" onClick=" answerChecker() " value="Submit" />
+    </div>
+  </form>
 </html>
