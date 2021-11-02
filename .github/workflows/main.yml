@@ -1,0 +1,18 @@
+name: AutoDeployBackend
+on: 
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy pipeline
+        uses: fifsky/ssh-action@master
+        with:
+          command: |
+            ./Deploy.sh
+          host: 40.114.226.249
+          args: "-tt -vvv"  
+          user: azureuser
+          key: ${{ secrets.PRIVATE_KEY}}
