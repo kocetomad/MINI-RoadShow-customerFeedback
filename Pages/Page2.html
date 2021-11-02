@@ -1,4 +1,5 @@
 <script src="util.js"></script>
+<link rel="stylesheet" href="style.css">
 
 <html>
   <script>
@@ -69,34 +70,3 @@
 
 </html>
 
-    function check() {
-      var f = document.getElementById("question");
-      f.setAttribute("method", "post");
-      if (document.getElementById("a1").checked == true) {
-        console.log("correct");
-        document.location.href = "\Page3_Correct.html";
-      } else {
-        console.log("incorrect");
-        document.location.href = "\Page3_Incorrect.html";
-      }
-      return true;
-    }
-  </script>
-
-  <h1>Sample BMW Survey Question</h1>
-
-  <form>
-    <p>Lorem Ipsum?:</p>
-    <div>
-      <input type="radio" id="a1" name="answer" value="answer1" />
-      <label for="answer1">Answer</label>
-      <input type="radio" id="a2" name="answer" value="answer2" />
-      <label for="answer2">Answer</label>
-      <input type="radio" id="a3" name="answer" value="answer3" />
-      <label for="answer3">Answer</label>
-    </div>
-    <div>
-      <input type="button" onClick=" answerChecker() " value="Submit" />
-    </div>
-  </form>
-</html>
