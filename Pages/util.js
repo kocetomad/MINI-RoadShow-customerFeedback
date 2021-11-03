@@ -13,7 +13,7 @@ function getCookie(cname) {
     }
 
     var newid = makeid(20);
-    document.cookie = "username="+newid+"";
+    document.cookie = "username="+newid+"; path=/;";
 
     var xhr = new XMLHttpRequest();
       xhr.open("POST", "/insertScores", true);
