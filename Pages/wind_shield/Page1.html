@@ -2,11 +2,9 @@
 <!DOCTYPE html>
 
 <html>
-  <h1 id="h1" style = "text-align: center">Loading...</h1>
+  <h1 id="h1" style="text-align: center">Loading...</h1>
 
   <script>
-
-
     var audio = new Audio("MEDIA_211006_2P60299_3N65091_2R22147_Combined.wav");
 
     function clickityFun() {
@@ -15,13 +13,12 @@
       console.log("help");
     }
     var c = getCookie("username");
-    console.log(c)
-    if(c!=""){
+    console.log(c);
+    if (c != "") {
       document.getElementById("h1").innerHTML = "Welcome again";
-    }else{
+    } else {
       document.getElementById("h1").innerHTML = "Welcome";
     }
-
   </script>
 
   <head>
@@ -40,35 +37,35 @@
         margin-right: auto;
       }
       body {
-        background: #E8EBF3
+        background: #e8ebf3;
       }
-      .header-img 
-      {
+      .header-img {
         width: 100%;
         height: auto;
-        background: url('mini.png');
+        background: url("mini.png");
         background-size: cover;
         margin: auto;
         text-align: center;
       }
       .next-button {
         align-items: center;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.1);
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
         box-sizing: border-box;
         color: rgba(0, 0, 0, 0.85);
         cursor: pointer;
         display: inline-flex;
-        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+          Helvetica, Arial, sans-serif;
         font-size: 16px;
         font-weight: 600;
         justify-content: center;
         line-height: 1.25;
         margin: 0;
         min-height: 3rem;
-        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
         position: relative;
         text-decoration: none;
         transition: all 250ms;
@@ -90,7 +87,7 @@
         transform: translateY(-1px);
       }
       .next-button:active {
-        background-color: #F0F0F1;
+        background-color: #f0f0f1;
         border-color: rgba(0, 0, 0, 0.15);
         box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
         color: rgba(0, 0, 0, 0.65);
@@ -117,6 +114,6 @@
     </video>
   </b> -->
   <form action="Page2.html" style="text-align: center">
-    <input class="next-button" type="submit" value="Next Page"/>
-</form>
+    <input class="next-button" type="submit" value="Next Page" />
+  </form>
 </html>
