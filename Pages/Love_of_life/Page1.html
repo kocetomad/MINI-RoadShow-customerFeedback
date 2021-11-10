@@ -11,10 +11,15 @@
     var audio = new Audio("211104_Like_1_2R07566_edited.wav");
 
     function clickityFun() {
-      audio.play();
-
+      audio.play()
       console.log("help");
-    }
+      }
+
+    function clickPause() {
+       audio.pause()
+       console.log("Help(pause)")
+      }
+
     var c = getCookie("username");
     console.log(c);
     if (c != "") {
@@ -96,28 +101,27 @@
         color: rgba(0, 0, 0, 0.65);
         transform: translateY(0);
       }
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
     </style>
   </head>
-
-  <!-- <h2 style="text-align: center"></h2> -->
   <img src="MEDIA_211110_Like_1.png" style="width: 95%" />
-  <h2 style="text-align: center">Click the play button blow to listen to this customer's thoughts!</h2>
-  <a onclick="clickityFun();">
-    <img src="..\play_btn.png" style="width: 20%" />
-  </a>
-
-  <!-- <b>
-    <video
-      controls="controls"
-      width="800"
-      height="600"
-      name="Customer_Summary"
-      style="width: 50%"
-    >
-      <source src="MEDIA_191029_Voice-of-the-Customer_summary_Subtitled.mov" />
-    </video>
-  </b> -->
-  <form action="Page2.html" style="text-align: center">
-    <input class="next-button" type="submit" value="Next Page" />
+  <h2 style="text-align: center; font-size: 40px">Click the play button blow to listen to this customer's thoughts!</h2>
+  <div class="row">
+      <a1 class="column" onclick="clickityFun();" >
+        <img src="..\play_btn.png" style="width: 50%" />
+      </a1>
+      <a2 class="column" onclick="clickPause();">
+        <img src="..\pause_btn.png" style="width: 50%" />
+      </a2>
+  </div>
+  <form action="Page2.html" style="text-align: center;">
+    <input class="next-button" type="submit" value="Next Page" style="font-size:40 px;" />
   </form>
 </html>
