@@ -7,7 +7,7 @@ const getScore = (id) => {
 };
 
 const insertQrHit = (part) => {
-  return "insert into qr_scans values('" + part + "');";
+  return "insert into qr_scan values('" + part + "');";
 };
 
 module.exports = {
