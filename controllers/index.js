@@ -17,7 +17,15 @@ const GetScores = (req, resp, client) => {
       })
 }
 
+const InsertQrHit = (req, resp, client) => {
+    console.log(""+req.body.id)
+    client.query(queries.insertQrHit(req.body.part), (err, res) => {
+        console.log(err, res.rows[0])
+      })
+}
+
 module.exports = {
     InsertScores,
-    GetScores
+    GetScores,
+    InsertQrHit
 }

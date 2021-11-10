@@ -21,6 +21,7 @@ app.use(express.json())
 app.use(express.static('Pages'))
 app.post('/insertScores', (req, res) => controllers.InsertScores(req, res, client))
 app.post('/getScores', (req, res) => controllers.GetScores(req, res, client))
+app.post('/insertQrHit', (req, res) => controllers.InsertQrHit(req, res, client))
 
 
 app.listen(3000, () => console.log("APP RUNNING ON PORT:3000"))

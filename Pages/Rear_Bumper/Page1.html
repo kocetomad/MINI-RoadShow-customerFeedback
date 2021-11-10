@@ -5,7 +5,14 @@
   <h1 id="h1" style = "text-align: center">Loading...</h1>
 
   <script>
-
+    var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertQrHit", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(
+          JSON.stringify({
+            part: "reear bumper"
+          })
+        );
 
     var audio = new Audio("MEDIA_211006_2P60299_3N65091_2R22147_Combined.wav");
 
