@@ -1,0 +1,77 @@
+<script src="../util.js"></script>
+<link rel="stylesheet" href="../style.css">
+
+<html>
+  <script>
+    var link = "";
+
+    function answerChecker() {
+      if (document.getElementById("a1").checked == true) {
+        //Inserting score for correct answer 
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertScores", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(
+          JSON.stringify({
+            id: getCookie("username"),
+            score: 1,
+          })
+        );
+
+
+        var link = "Page3_Correct.html";
+        document.location.href = link;
+
+        
+      } else {
+        var link = "Page3_Incorrect.html";
+        document.location.href = link;
+      }
+      return link;
+    }
+  </script>
+  
+  <div class = 'header-img'>
+    <img style = "width: 50%; height: auto; "  src="../mini.png">
+  </div>
+
+    <h2>
+      <div class = 'question-header'>
+           Question1
+      </div>
+      
+    </h2>
+
+    <p> 
+      <br>
+      <div class = 'question' > How many faults per month? :</div>
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  
+    <form class = 'answer-box'>
+        
+        
+          <label for="answer1">10</label>
+          <input type="radio" id="a1"
+                 name="answer" value="answer1">
+          <label for="answer2">100</label>
+          <input type="radio" id="a2"
+                 name="answer" value="answer2">
+          <label for="answer3">1000</label>
+          <input type="radio" id="a3"
+                 name="answer" value="answer3">
+        <div>
+          <input class = 'submit-button' type = "button" onClick = " answerChecker() " value = "Submit"/>
+        </div>
+    </form>
+      
+    
+
+</html>
+
