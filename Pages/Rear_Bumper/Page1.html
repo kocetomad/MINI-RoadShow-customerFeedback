@@ -8,9 +8,10 @@
     var xhr = new XMLHttpRequest();
         xhr.open("POST", "/insertQrHit", true);
         xhr.setRequestHeader("Content-Type", "application/json");
+        let p = document.location.pathname.split('/')
         xhr.send(
           JSON.stringify({
-            part: "reear bumper"
+            part: p[1]
           })
         );
 
