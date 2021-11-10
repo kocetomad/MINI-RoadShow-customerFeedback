@@ -2,7 +2,7 @@
 
 <html>
   <link rel="stylesheet" href="../style.css">
-    
+  
 
   <div class = 'header-img'>
     <img style = "width: 50%; height: auto; "  src="../mini.png">
@@ -20,6 +20,82 @@
     <div class = 'feedback-image-incorrect'>
       <img style = "width: 50%; height: auto; "  src="../wrong.png">
     </div>
+
+
+
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        background: #E8EBF3
+      }
+      .header-img 
+      {
+        width: 100%;
+        height: auto;
+        background: url('mini.png');
+        background-size: cover;
+        margin: auto;
+        text-align: center;
+      }
+      .next-button {
+        align-items: center;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: .25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .next-button:hover,
+      .next-button:focus {
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+      .next-button:hover {
+        transform: translateY(-1px);
+      }
+      .next-button:active {
+        background-color: #F0F0F1;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
+        transform: translateY(0);
+      }
+    </style>
+    <form action="Page2.html" style="text-align: center">
+      <input class="next-button" type="submit" value="Try again" />
+    </form>
 </html>
 
 <script>
