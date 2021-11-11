@@ -15,6 +15,7 @@
         
     </h2>
     <p id="urscore">loading...</p>
+    <p style="text-align: center; font-family: 'PT Sans', sans-serif; font-size: 20px;">Please move on to the next QR!</p>
 
 
     <div class = 'feedback-image-correct'>
@@ -34,6 +35,6 @@
     xhr.onload = function () {
       var data = JSON.parse(this.responseText);
       console.log(data);
-      document.getElementById("urscore").innerHTML = "Your curren score is:" + data;
+      document.getElementById("urscore").innerHTML = "Your current score is: " + data + " of 5";
     };
   </script>
