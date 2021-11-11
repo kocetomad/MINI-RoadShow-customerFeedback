@@ -1,11 +1,12 @@
 const queries = require('../SqlQuerys')
 
-const InsertScores = (req, res, client) => {
+const InsertScores = (req, resp, client) => {
 
     console.log(""+req.body.id)
     client.query(queries.insertScore(req.body.id,req.body.score), (err, res) => {
         console.log(err, res.rows[0])
       })
+      resp.send({ title: 'succes' })
 }
 
 const GetScores = (req, resp, client) => {
@@ -22,6 +23,7 @@ const InsertQrHit = (req, resp, client) => {
     client.query(queries.insertQrHit(req.body.part), (err, res) => {
         console.log(err, res.rows[0])
       })
+      resp.send({ title: 'succes' })
 }
 
 module.exports = {
