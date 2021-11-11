@@ -6,7 +6,7 @@
     var link = "";
 
     function answerChecker() {
-      if (document.getElementById("a1").checked == true) {
+      if (document.getElementById("a2").checked == true) {
         //Inserting score for correct answer 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "/insertScores", true);
@@ -45,20 +45,20 @@
 
     <p> 
       <br>
-      <div class = 'question' > What was the incorrect symbol that was fitted on the Cooper D? :</div>
+      <div class = 'question' > Where have tonneau inclusions been found? :</div>
     </p>
 
   
     <form class = 'answer-box'>
         
         
-          <label for="answer1">Cooper S symbol</label>
+          <label for="answer1">Japan</label>
           <input type="radio" id="a1"
                  name="answer" value="answer1">
-          <label for="answer2">No symbol fitted</label>
+          <label for="answer2">Japan, China & USA</label>
           <input type="radio" id="a2"
                  name="answer" value="answer2">
-          <label for="answer3">Cooper D symbol</label>
+          <label for="answer3">USA</label>
           <input type="radio" id="a3"
                  name="answer" value="answer3">
         <div>

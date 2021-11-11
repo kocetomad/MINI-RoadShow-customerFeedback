@@ -92,7 +92,7 @@
       }
     </style>
     <form action="Page2.html" style="text-align: center">
-      <input class="next-button" type="submit" value="Try again" />
+      <input class="next-button" type="submit" value="Try again" style="font-family: 'PT Sans', sans-serif; font-size: 40px;"/>
     </form>
 </html>
 
@@ -108,6 +108,6 @@
     xhr.onload = function () {
       var data = JSON.parse(this.responseText);
       console.log(data);
-      document.getElementById("urscore").innerHTML = "Your curren score is:" + data;
+      document.getElementById("urscore").innerHTML = "Your current score is: " + data + " of 5";
     };
   </script>
