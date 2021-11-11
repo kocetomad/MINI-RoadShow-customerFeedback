@@ -1,0 +1,128 @@
+<script src="../util.js"></script>
+<!DOCTYPE html>
+
+<html>
+  <h1 id="h1" style = "text-align: center">Loading...</h1>
+
+  <script>
+    var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertQrHit", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        let p = document.location.pathname.split('/')
+        xhr.send(
+          JSON.stringify({
+            part: p[1]
+          })
+        );
+
+  
+
+    function clickityFun() {
+      audio.play();
+
+      console.log("help");
+    }
+    var c = getCookie("username");
+    console.log(c)
+    if(c!=""){
+      document.getElementById("h1").innerHTML = "Welcome again";
+    }else{
+      document.getElementById("h1").innerHTML = "Welcome";
+    }
+
+  </script>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        background: #E8EBF3
+      }
+      .header-img 
+      {
+        width: 100%;
+        height: auto;
+        background: url('mini.png');
+        background-size: cover;
+        margin: auto;
+        text-align: center;
+      }
+      .next-button {
+        align-items: center;
+        background-color: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: .25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .next-button:hover,
+      .next-button:focus {
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+      .next-button:hover {
+        transform: translateY(-1px);
+      }
+      .next-button:active {
+        background-color: #F0F0F1;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+
+  <a>
+    <img src="https://drive.google.com/uc?export=view&id=1lph2O3ERn-JSFRHfvm_e2CxOMZjJQxJw" style="width: 95%" />
+  </a>
+
+  <!-- <b>
+    <video
+      controls="controls"
+      width="800"
+      height="600"
+      name="Customer_Summary"
+      style="width: 50%"
+    >
+      <source src="MEDIA_191029_Voice-of-the-Customer_summary_Subtitled.mov" />
+    </video>
+  </b> -->
+  <form action="Page2.html" style="text-align: center">
+    <input class="next-button" type="submit" value="Next Page"/>
+</form>
+</html>
