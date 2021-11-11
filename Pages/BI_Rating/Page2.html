@@ -17,10 +17,12 @@
             score: 1,
           })
         );
-
-
-        var link = "Page3_Correct.html";
+        xhr.onload = function () {
+          var link = "Page3_Correct.html";
         document.location.href = link;
+    };
+
+        
 
         
       } else {

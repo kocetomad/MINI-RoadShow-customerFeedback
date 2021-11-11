@@ -17,10 +17,11 @@
             score: 1,
           })
         );
-
-
-        var link = "Page3_Correct.html";
+        xhr.onload = function () {
+          var link = "Page3_Correct.html";
         document.location.href = link;
+    };
+
 
         
       } else {
@@ -50,8 +51,6 @@
 
   
     <form class = 'answer-box'>
-        
-        
           <label for="answer1">BI:1</label>
           <input type="radio" id="a1"
                  name="answer" value="answer1">
@@ -62,7 +61,7 @@
           <input type="radio" id="a3"
                  name="answer" value="answer3">
         <div>
-          <input class = 'submit-button' type = "button" onClick = " answerChecker() " value = "Submit" style="text-align: center; font-family: 'PT Sans', sans-serif; font-size: 40px;"/>
+          <input class = 'submit-button' type = "button" onClick = " answerChecker() " value = "Submit"/>
         </div>
     </form>
       
