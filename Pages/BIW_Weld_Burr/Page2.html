@@ -1,0 +1,74 @@
+<script src="../util.js"></script>
+<link rel="stylesheet" href="../style.css">
+
+<html>
+  <script>
+    var link = "";
+
+    function answerChecker() {
+      if (document.getElementById("a3").checked == true) {
+        //Inserting score for correct answer 
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertScores", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(
+          JSON.stringify({
+            id: getCookie("username"),
+            score: 1,
+          })
+        );
+        xhr.onload = function () {
+          var link = "Page3_Correct.html";
+        document.location.href = link;
+    };
+
+        
+
+        
+      } else {
+        var link = "Page3_Incorrect.html";
+        document.location.href = link;
+      }
+      return link;
+    }
+  </script>
+  
+    <h1>
+      <div class = 'header-img'>
+      </div>
+    </h1>
+
+    <h2>
+      <div class = 'question-header'>
+           Question:
+      </div>
+      
+    </h2>
+
+    <p> 
+      <br>
+      <div class = 'question' > What is the typical cost if a weld burr is found? :</div>
+    </p>
+
+  
+    <form class = 'answer-box'>
+        
+        
+          <label for="answer1">£5</label>
+          <input type="radio" id="a1"
+                 name="answer" value="answer1">
+          <label for="answer2">£15</label>
+          <input type="radio" id="a2"
+                 name="answer" value="answer2">
+          <label for="answer3">£20</label>
+          <input type="radio" id="a3"
+                 name="answer" value="answer3">
+        <div>
+          <input class = 'submit-button' type = "button" onClick = " answerChecker() " value = "Submit" style="text-align: center; font-family: 'PT Sans', sans-serif; font-size: 40px;"/>
+        </div>
+    </form>
+      
+    
+
+</html>
+
