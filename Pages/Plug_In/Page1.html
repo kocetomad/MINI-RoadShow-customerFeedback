@@ -1,0 +1,143 @@
+<script src="../util.js"></script>
+<link rel="stylesheet" href="../style.css">
+<!DOCTYPE html>
+
+<html>
+  <div class = 'header-img'>
+    <img style = "width: 50%; height: auto; "  src="../mini.png">
+  </div>
+
+  <script>
+    var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/insertQrHit", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        let p = document.location.pathname.split('/')
+        xhr.send(
+          JSON.stringify({
+            part: p[1]
+          })
+        );
+    
+    var audio = new Audio("../MEDIA_220516_2S11874_Plug_in.wav");
+
+    function PlayPauseFunc() {
+      if (audio.paused) {
+        audio.play();
+        var pauseaudio = document.getElementById("play")
+        pauseaudio.src="../pause_btn.png";
+      } else{
+        audio.pause();
+        var playaudio = document.getElementById("play")
+        playaudio.src="../play_btn.png";
+      }
+      console.log("help");
+      }
+
+    function clickPause() {
+       audio.pause()
+       console.log("Help(pause)")
+      }
+
+    var c = getCookie("username");
+    console.log(c);
+    if (c != "") {
+      document.getElementById("h1").innerHTML = "Welcome again";
+    } else {
+      document.getElementById("h1").innerHTML = "Welcome";
+    }
+  </script>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      video {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        background: #e8ebf3;
+      }
+      .header-img {
+        width: 100%;
+        height: auto;
+        background: url("mini.png");
+        background-size: cover;
+        margin: auto;
+        text-align: center;
+      }
+      .next-button {
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.85);
+        cursor: pointer;
+        display: inline-flex;
+        font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
+          Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin: 0;
+        min-height: 3rem;
+        padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .next-button:hover,
+      .next-button:focus {
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+      .next-button:hover {
+        transform: translateY(-1px);
+      }
+      .next-button:active {
+        background-color: #f0f0f1;
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+        color: rgba(0, 0, 0, 0.65);
+        transform: translateY(0);
+      }
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+    </style>
+  </head>
+  <img src="../MEDIA_220524_Bigger_Mirros_Are_Better.png" style="width: 95%" />
+  
+  <div class="row">
+    
+      <a1 class="column" onclick="PlayPauseFunc();" >
+        <img id="play" src="../play_btn.png" style="width: 50%" />
+      </a1>
+  </div>
+  <form action="Page2.html" style="text-align: center;">
+    <input class="next-button" type="submit" value="Next Page" style="font-size:40 px;" />
+  </form>
+</html>
