@@ -121,7 +121,8 @@ body
   width: auto;
   margin-top: 10px;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 #urscore
