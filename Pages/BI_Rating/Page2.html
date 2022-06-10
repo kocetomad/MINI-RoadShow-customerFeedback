@@ -3,6 +3,7 @@
 
 <html>
   <script>
+    
     var link = "";
 
     function answerChecker() {
@@ -31,8 +32,37 @@
       }
       return link;
     }
-  </script>
   
+  </script>
+  <style>
+    .answer-box{
+    --background: #ffffff;
+    --text: #414856;
+    --radio: #7C96B2;
+    --radio-checked: #4F29F0;
+    --radio-size: 20px;
+    --width: 600px;    
+    --height: 1400px;
+    --border-radius: 10px;
+    
+    
+
+    background: var(--background);
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(#414856, 0.05);
+    padding: 30px 45px;
+    display: grid;
+    grid-template-columns: auto var(--radio-size);
+    align-items: center;
+    font: 400 50px system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  </style>  
     <h1>
       <div class = 'header-img'>
       </div>
